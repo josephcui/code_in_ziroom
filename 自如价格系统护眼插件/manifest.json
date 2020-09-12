@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "价格系统辅助插件",
+    "version": "0.0.1",
+    "description": "更改页面元素颜色",
+    "permissions": [
+      "http://ramp.ziroom.com/*"
+    ],
+    "icons": {
+      "16": "images/icon16.png"
+    },
+    "content_scripts": [
+      {
+        "matches": [
+            "http://ramp.ziroom.com/*"
+        ],
+        "js": [
+          "change_color.js"
+        ],
+        "all_frames": true,
+        "run_at": "document_idle"
+      }
+    ]
+  }
